@@ -1,0 +1,170 @@
+.head_three {text-align: center;}
+
+.application_table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    /*width: 100%;*/
+    text-align: center;
+}
+
+.application_td, .application_th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+.application_tr:nth-child(even) {
+    background-color: grey;
+}
+
+
+
+.applicationBody{
+    background-image: url(../img/bankBG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+
+/*
+.applicationBody{
+    background-image: url(../img/bankBG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}*/
+*{
+    box-sizing: border-box;
+}
+.applicationContainer{
+    margin-top: -30px;
+}
+
+
+
+.applicationForm{
+    background-color: white;
+    width:400px;
+    height:580px;
+    margin-left: 400px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px; 
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top: 20px;
+
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.applicationText, select{
+    width: 100%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number], select {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=loc], select {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* .form-group{
+    font-size: 15px;
+} */
+
+.btn.btn-primary {
+    background: #eccc68 none repeat scroll 0 0;
+    border-color:#2f3542 ;
+    color: black;
+    font-size: 20px;
+
+
+    width: 50%;
+    height: 35px;
+    line-height: 30px;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 25%;
+    border-radius: 20px;
+}
+
+.btn.btn-primary:hover {
+    background: #ff6348;
+}
+
+.form-control {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.panel h2{
+    color:#2f3542;
+    text-align: center;
+
+}
+
+.panel p{
+    color:#777777;
+    font-size: 20px;
+    text-align: center;
+}

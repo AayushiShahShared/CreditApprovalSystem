@@ -1,0 +1,38 @@
+.primary-background{
+    background: #26a69a!important;
+}
+
+.nav-background{
+    background: blue!important;
+}
+
+/*.nav-background{
+    background: #0a2558!important;
+}*/
+.outline-primary-background{
+    outline: #26a69a!important;
+    color: green;
+}
+.nav-outline-background{
+    outline: #26a69a!important;
+    color: green;
+}
+
+#approve-btn{
+    border: none;
+}
+
+#viewApplicationContainer{
+    width: 75%;
+    
+}
+/*#approve-btn{
+  background-color: red;  Green 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}*/
