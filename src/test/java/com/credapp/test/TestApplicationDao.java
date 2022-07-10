@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credapp.test.applicationdao;
+package com.credapp.test;
 
 import com.credapp.dao.ApplicationDao;
 import com.credapp.dao.ReviewApplicationDao;
@@ -34,7 +34,7 @@ import org.junit.Test;
  *
  * @author Aayushi
  */
-public class testApplicationDao {
+public class TestApplicationDao {
     
    static Connection con = null;
 static Application applicationInstance = new Application();
@@ -44,7 +44,7 @@ static Application applicationInstance = new Application();
            static ArrayList<Application> applicationList = new ArrayList<>();
 static int aid;
 //            static Logger LOG =null;
-static final Logger LOG = Logger.getLogger(testApplicationDao.class.getName());
+static final Logger LOG = Logger.getLogger(TestApplicationDao.class.getName());
  
     /**
      *
@@ -76,7 +76,7 @@ static final Logger LOG = Logger.getLogger(testApplicationDao.class.getName());
                 aid = applicationIns.getId();
             }
         } catch (SQLException ex) {
-            Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("before class");
         System.out.println(aid);
@@ -146,7 +146,7 @@ applicationInstance.setReason("Discount is not right.");
                     adao.deleteApplicationById(applicationInstance.getId());
                 } catch (SQLException ex) {
                     LOG.info("submitApprovedform test case failed");
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
        
     }
@@ -172,7 +172,7 @@ applicationInstance.setReason("Discount is not right.");
             System.out.println("Getting applications count with approved status test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -197,7 +197,7 @@ applicationInstance.setReason("Discount is not right.");
             System.out.println("Getting applications count with rejected status test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -223,7 +223,7 @@ applicationInstance.setReason("Discount is not right.");
             System.out.println("Getting all applications count test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -248,7 +248,7 @@ applicationInstance.setReason("Discount is not right.");
             System.out.println("Getting all applications count by company name test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -323,7 +323,7 @@ applicationInstance.setReason("Discount is not right.");
                     adao.deleteApplicationById(applicationInstance.getId());
                 } catch (SQLException ex) {
                     LOG.info("submitform test case failed");
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
        
              
@@ -360,7 +360,7 @@ applicationInstance.setReason("Discount is not right. cibil is also less.");
                  adao.deleteApplicationById(application.getId());
                 } catch (SQLException ex) {
                     LOG.info("submitRejectedformInApplication test case failed");
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
        
              
@@ -400,7 +400,7 @@ applicationInstance.setReason("");
                  adao.deleteApplicationById(application.getId());
                 } catch (SQLException ex) {
                     LOG.info("submitApprovedformInApplication test case failed");
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
        
       
@@ -486,7 +486,7 @@ Assert.assertEquals("Getting application of particular company", applicationInst
 adao.deleteApplicationById(applicationInstance.getId());
                 } catch (SQLException ex) {
                     LOG.info("submitApprovedform test case failed");
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
        
     }
@@ -542,7 +542,7 @@ application.setApplicationDate(rs.getTimestamp("appDate"));
 adao.deleteApplicationById(applicationInstance.getId());
                 } catch (SQLException ex) {
                     LOG.info("submitApprovedform test case failed");
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
                 }
        
     }
@@ -581,7 +581,7 @@ application = applicationIns;
             System.out.println("Getting applications from range test case passed");
 adao.deleteApplicationById(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -613,7 +613,7 @@ application = applicationIns;
             System.out.println("Getting applications from range by company name test case passed");
 adao.deleteApplicationById(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
    
@@ -642,7 +642,7 @@ Assert.assertTrue("submit application form test case passed", result);
             System.out.println("Getting applications by details test case passed");
 adao.deleteApplicationById(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
    
@@ -684,19 +684,19 @@ Assert.assertTrue("submit application form test case passed", result);
     
             
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
    
     /**
      *
      */
-    @AfterClass
-public static void tearDown(){
-                try {
-                    con.close();
-                } catch (SQLException ex) {
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
-                }
-}
+//    @AfterClass
+//public static void tearDown(){
+//                try {
+////                    con.close();
+//                } catch (SQLException ex) {
+////                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//}
 }

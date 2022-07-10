@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credapp.test.applicationdao;
+package com.credapp.test;
 
 import com.credapp.dao.ApplicationDao;
 import com.credapp.dao.PendingApplicationDao;
@@ -29,7 +29,7 @@ import org.junit.Test;
  *
  * @author Aayushi
  */
-public class testReviewApplicationDao {
+public class TestReviewApplicationDao {
   
     
        static Connection con = null;
@@ -40,7 +40,7 @@ static  ReviewApplicationDao rdao = null;
     static ArrayList<Application> applicationList = new ArrayList<>();
     static int aid;
 //            static Logger LOG =null;
-    static final Logger LOG = Logger.getLogger(testPendingApplicationDao.class.getName());
+    static final Logger LOG = Logger.getLogger(TestPendingApplicationDao.class.getName());
 
     @BeforeClass
     public static void setUp() {
@@ -54,6 +54,7 @@ rdao = new ReviewApplicationDao(con);
       aid = applicationIns.getId();
   }
         System.out.println("before class");
+        System.out.println(con);
         System.out.println("aid"+aid);
 
                    //        set the values to prepared statement
@@ -164,7 +165,7 @@ application = applicationIns;
             System.out.println("Getting review applications from range by company name test case passed");
 rdao.deleteReviewById(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
    
@@ -201,7 +202,7 @@ application = applicationIns;
             System.out.println("Getting review applications from range test case passed");
 rdao.deleteReviewById(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
    
@@ -234,7 +235,7 @@ rdao.deleteReviewById(applicationInstance.getId());
             System.out.println("Getting all review applications test case passed");
            rdao.deleteReviewById(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -258,7 +259,7 @@ rdao.deleteReviewById(applicationInstance.getId());
             System.out.println("Getting review applications count test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -281,7 +282,7 @@ rdao.deleteReviewById(applicationInstance.getId());
             System.out.println("Getting review applications count by company name test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -328,7 +329,7 @@ Assert.assertTrue("get under review application by name form test case passed", 
            expectedCount=rdao.getReviewApplicationsCountByCompanyName(applicationInstance.getCompanyName());
            Assert.assertEquals(expectedCount, count);
            } catch (SQLException ex) {
-               Logger.getLogger(testReviewApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+               Logger.getLogger(TestReviewApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
            }
         Assert.assertEquals(applicationInstance.getStatus(), application.getStatus());
         Assert.assertEquals(applicationInstance.getApplicationDate(), application.getApplicationDate());
@@ -340,15 +341,15 @@ rdao.deleteReviewById(applicationInstance.getId());
   
     
        
-    @AfterClass
-    public static void tearDown() {
-        try {
-            con.close();
-            System.out.println("connection closed");
-            System.out.println("After class");
-        } catch (SQLException ex) {
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+//    @AfterClass
+//    public static void tearDown() {
+//        try {
+//            con.close();
+//            System.out.println("connection closed");
+//            System.out.println("After class");
+//        } catch (SQLException ex) {
+////                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 
 }

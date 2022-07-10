@@ -4,7 +4,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credapp.test.applicationdao;
+package com.credapp.test;
 
 import com.credapp.dao.ApplicationDao;
 import com.credapp.dao.CompanyDao;
@@ -12,8 +12,8 @@ import com.credapp.dao.PendingApplicationDao;
 import com.credapp.dao.ReviewApplicationDao;
 import com.credapp.entities.Application;
 import com.credapp.helper.ConnectionProvider;
-import static com.credapp.test.applicationdao.testApplicationDao.aid;
-import static com.credapp.test.applicationdao.testCompanyDao.con;
+import static com.credapp.test.TestApplicationDao.aid;
+import static com.credapp.test.TestCompanyDao.con;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -33,7 +33,7 @@ import org.junit.Test;
  *
  * @author Aayushi
  */
-public class testPendingApplicationDao {
+public class TestPendingApplicationDao {
     static Connection con = null;
 static Application applicationInstance = new Application();
 
@@ -43,7 +43,7 @@ static Application applicationInstance = new Application();
     static ArrayList<Application> applicationList = new ArrayList<>();
     static int aid;
 //            static Logger LOG =null;
-    static final Logger LOG = Logger.getLogger(testPendingApplicationDao.class.getName());
+    static final Logger LOG = Logger.getLogger(TestPendingApplicationDao.class.getName());
 
     @BeforeClass
     public static void setUp() {
@@ -147,7 +147,7 @@ Assert.assertTrue("submit pending form test case passed", result);
             System.out.println("Getting pending applications count test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -181,7 +181,7 @@ application = applicationIns;
             System.out.println("Getting applications from range test case passed");
 pdao.deletePendingApplication(aid);
         } catch (SQLException ex) {
-            Logger.getLogger(testPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestPendingApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
      
@@ -216,7 +216,7 @@ pdao.deletePendingApplication(aid);
             System.out.println("Getting all pending applications test case passed");
             pdao.deletePendingApplication(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -262,7 +262,7 @@ expectedCount++;
             System.out.println("Getting all pending applications by company name test case passed");
             pdao.deletePendingApplication(applicationInstance.getId());
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -326,7 +326,7 @@ expectedCount++;
             System.out.println("connection closed");
             System.out.println("After class");
         } catch (SQLException ex) {
-//                    Logger.getLogger(testApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
+//                    Logger.getLogger(TestApplicationDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

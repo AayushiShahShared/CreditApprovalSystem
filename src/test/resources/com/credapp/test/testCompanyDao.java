@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.credapp.test.applicationdao;
+package com.credapp.test;
 
 import com.credapp.dao.CompanyDao;
 import com.credapp.entities.Application;
@@ -26,7 +26,7 @@ import org.mindrot.jbcrypt.BCrypt;
  *
  * @author Aayushi
  */
-public class testCompanyDao {
+public class TestCompanyDao {
 
     static Connection con = null;
 
@@ -36,7 +36,7 @@ public class testCompanyDao {
     static ArrayList<Application> companyList = new ArrayList<>();
     static int cid;
 //            static Logger LOG =null;
-    static final Logger LOG = Logger.getLogger(testCompanyDao.class.getName());
+    static final Logger LOG = Logger.getLogger(TestCompanyDao.class.getName());
 
     @BeforeClass
     public static void setUp() {
@@ -166,7 +166,7 @@ public class testCompanyDao {
             System.out.println("Getting companies count test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -232,7 +232,7 @@ public class testCompanyDao {
             Assert.assertEquals(cdao.getCompaniesCount(), count - 2);
             System.out.println("Getting all companies test case passed");
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -259,7 +259,7 @@ public class testCompanyDao {
             System.out.println("Getting all companies from range test case passed");
 
         } catch (SQLException ex) {
-            Logger.getLogger(testCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TestCompanyDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
